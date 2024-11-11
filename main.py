@@ -6,7 +6,8 @@ class Asiento:
 
     def cambiarcolor(self, color: str):
         colores = ["rojo", "verde", "amarillo", "negro", "blanco"]
-        self.color = color
+        if color in Asiento.colores:
+            self.color = color
 
 class Motor:
     def __init__(self, numerocilindros: int, tipo: str, registro: int):
